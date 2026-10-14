@@ -6,7 +6,7 @@ TA-Lib>=0.4.28
 
 # Data handling
 pandas>=2.0
-numpy>=1.24
+numpy>=2.2.6
 
 # NOTE: freqtrade pins many of its own dependencies internally.
 # Prefer installing freqtrade via its official method, then use this file
