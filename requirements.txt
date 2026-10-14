@@ -1,5 +1,5 @@
 # Core trading framework
-freqtrade>=2024.1
+freqtrade>=2025.6
 
 # Technical indicators (requires the native TA-Lib C library — see README)
 TA-Lib>=0.4.28
