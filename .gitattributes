@@ -1,0 +1,11 @@
+# Normalise line endings across platforms
+* text=auto eol=lf
+
+# Mark generated / binary files
+*.png binary
+*.jpg binary
+*.feather binary
+*.sqlite binary
+
+# Keep these out of language stats
+config/config.example.json linguist-language=JSON

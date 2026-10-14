@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-14T09:30:00Z",
+  "symbol": "SOL/USDT",
+  "price": 150.0,
+  "indicators": {
+    "rsi": 55.0,
+    "adx": 15.0,
+    "ema20": 151.0,
+    "ema50": 150.5,
+    "ema200": 140.0,
+    "volume": 100.0
+  }
+}

@@ -1,0 +1,7 @@
+# Development-only dependencies (tests, linting, formatting, git hooks).
+# Install with:  pip install -r requirements-dev.txt
+pytest>=7.4
+pytest-cov>=4.1
+ruff>=0.5
+black>=24.4
+pre-commit>=3.7

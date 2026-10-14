@@ -1,0 +1,14 @@
+# Core trading framework
+freqtrade>=2024.1
+
+# Technical indicators (requires the native TA-Lib C library — see README)
+TA-Lib>=0.4.28
+
+# Data handling
+pandas>=2.0
+numpy>=1.24
+
+# NOTE: freqtrade pins many of its own dependencies internally.
+# Prefer installing freqtrade via its official method, then use this file
+# only for the extra packages above:
+#   pip install -r requirements.txt

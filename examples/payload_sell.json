@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-14T09:30:00Z",
+  "symbol": "ETH/USDT",
+  "price": 3000.0,
+  "indicators": {
+    "rsi": 78.0,
+    "adx": 30.0,
+    "ema20": 3100.0,
+    "ema50": 3050.0,
+    "ema200": 2900.0,
+    "volume": 100.0
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "max_open_trades": 5,
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "tradable_balance_ratio": 0.95,
+  "fiat_display_currency": "USD",
+  "amount_reserve_percent": 0.05,
+  "timeframe": "5m",
+  "dry_run": true,
+  "dry_run_wallet": 1000,
+  "cancel_open_orders_on_exit": false,
+  "trading_mode": "spot",
+  "margin_mode": "",
+  "unfilledtimeout": {
+    "entry": 10,
+    "exit": 5,
+    "exit_timeout_count": 0,
+    "unit": "minutes"
+  },
+  "entry_pricing": {
+    "price_side": "same",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0.0,
+    "check_depth_of_market": {
+      "enabled": false,
+      "bids_to_ask_delta": 1
+    }
+  },
+  "exit_pricing": {
+    "price_side": "same",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "exchange": {
+    "name": "binance",
+    "key": "YOUR_EXCHANGE_API_KEY",
+    "secret": "YOUR_EXCHANGE_API_SECRET",
+    "ccxt_config": {},
+    "ccxt_async_config": {},
+    "pair_whitelist": [],
+    "pair_blacklist": [
+      ".*(BULL|BEAR|UP|DOWN).*",
+      ".*(USDC|BUSD|TUSD)/.*",
+      ".*/USDC",
+      ".*/BUSD",
+      ".*/TUSD"
+    ]
+  },
+  "pairlists": [
+    {
+      "method": "VolumePairList",
+      "number_assets": 40,
+      "sort_key": "quoteVolume",
+      "refresh_period": 1800
+    },
+    {
+      "method": "AgeFilter",
+      "min_days_listed": 30
+    },
+    {
+      "method": "SpreadFilter",
+      "max_spread_ratio": 0.004
+    },
+    {
+      "method": "RangeStabilityFilter",
+      "lookback_days": 10,
+      "min_rate_of_change": 0.01,
+      "refresh_period": 1440
+    },
+    {
+      "method": "VolatilityFilter",
+      "lookback_days": 3,
+      "min_volatility": 0.02,
+      "max_volatility": 0.75,
+      "refresh_period": 1800
+    },
+    {
+      "method": "ShuffleFilter"
+    }
+  ],
+  "stoploss": -0.04,
+  "trailing_stop": true,
+  "trailing_stop_positive": 0.015,
+  "trailing_stop_positive_offset": 0.03,
+  "trailing_only_offset_is_reached": true,
+  "minimal_roi": {
+    "0": 0.1
+  },
+  "order_types": {
+    "entry": "limit",
+    "exit": "limit",
+    "emergency_exit": "market",
+    "force_entry": "market",
+    "force_exit": "market",
+    "stoploss": "market",
+    "stoploss_on_exchange": false,
+    "stoploss_on_exchange_interval": 60
+  },
+  "api_server": {
+    "enabled": true,
+    "listen_ip_address": "127.0.0.1",
+    "listen_port": 8080,
+    "verbosity": "error",
+    "enable_openapi": false,
+    "jwt_secret_key": "CHANGE_THIS_TO_A_RANDOM_SECRET",
+    "ws_token": "CHANGE_THIS_TO_A_RANDOM_WS_TOKEN",
+    "CORS_origins": [],
+    "username": "freqtrader",
+    "password": "CHANGE_THIS_STRONG_PASSWORD"
+  },
+  "telegram": {
+    "enabled": true,
+    "token": "YOUR_TELEGRAM_BOT_TOKEN",
+    "chat_id": "YOUR_TELEGRAM_CHAT_ID",
+    "notification_settings": {
+      "status": "on",
+      "warning": "on",
+      "startup": "on",
+      "entry": "on",
+      "entry_fill": "on",
+      "exit": "on",
+      "exit_fill": "on",
+      "entry_cancel": "on",
+      "exit_cancel": "on",
+      "protection_trigger": "on",
+      "protection_trigger_global": "on"
+    },
+    "reload": true
+  },
+  "initial_state": "running",
+  "force_entry_enable": false,
+  "internals": {
+    "process_throttle_secs": 5
+  },
+  "dataformat_ohlcv": "feather",
+  "dataformat_trades": "feather"
+}
