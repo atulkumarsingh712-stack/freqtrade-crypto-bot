@@ -3,6 +3,3 @@ contact_links:
   - name: Security vulnerability
     url: https://github.com/atulkumarsingh712-stack/freqtrade-crypto-bot/security/advisories/new
     about: Please report security issues privately, not as public issues.
-  - name: Question or discussion
-    url: https://github.com/atulkumarsingh712-stack/freqtrade-crypto-bot/discussions
-    about: Ask questions and discuss ideas here.
